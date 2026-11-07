@@ -14,6 +14,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.example.demo.entity.Product;
+import com.example.demo.repository.OrderRepository;
+import com.example.demo.repository.ProductRepository;
+import com.example.demo.service.CheckoutService;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest

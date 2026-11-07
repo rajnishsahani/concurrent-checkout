@@ -1,5 +1,4 @@
-// OutOfStockException.java
-package com.example.demo;
+package com.example.demo.service;
 
 public class OutOfStockException extends RuntimeException {
     public OutOfStockException(String m) { super(m); }

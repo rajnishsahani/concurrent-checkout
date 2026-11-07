@@ -1,10 +1,12 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.entity.Order;
+import com.example.demo.entity.Product;
+import com.example.demo.repository.OrderRepository;
+import com.example.demo.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-// OrderTxService.java — the transaction boundary.
 @Service
 public class OrderTxService {
     private final ProductRepository productRepo;

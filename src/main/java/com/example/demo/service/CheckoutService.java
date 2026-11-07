@@ -14,8 +14,9 @@
 // }
 
 
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.entity.Order;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,6 @@ public class CheckoutService {
         throw new OutOfStockException("too much contention");
     }
 }
-
 
 /*CheckoutService.java is the entry point callers actually hit. Today it just forwards straight to OrderTxService. 
 It exists as a separate bean for a specific reason: @Transactional works through a Spring proxy, 
