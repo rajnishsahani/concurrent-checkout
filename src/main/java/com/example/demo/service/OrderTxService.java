@@ -20,7 +20,7 @@ public class OrderTxService {
         if (p.getStock() <= 0) throw new OutOfStockException("out of stock");
         p.setStock(p.getStock() - 1);          // read-check-decrement: the race lives here
         productRepo.save(p);
-        return orderRepo.save(new Order(productId));
+        return orderRepo.save(new Order(p));    // now passes the Product, not its id
     }
 }
 
